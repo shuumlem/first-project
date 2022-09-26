@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title title="Tớ là Hiếu tớ iu Trang nhất trên đời">Hisu Love Trang</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <script src="https://kit.fontawesome.com/bb1c1a5855.js" crossorigin="anonymous"></script>
+    <script src="./js/scrips.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">            
+        <div class="navbar">
+            <div id="blurback"></div>
+            <div class="homeicon">
+                <a href="./index.html"><img src="./img/icon.png" alt="icon"></a>
+            </div>
+            <div class="menu">
+                <div id="toggle"></div>
+                <ul id="menulist">
+                    <div class="back"><i id="closemenu" class="fa-solid fa-angles-right"></i></div>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <a href="./login.html">Login</a>
+                    </li>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-info"></i>
+                        <a href="">Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="headcontent">
+                <h1>Hisu's Infomation</h1>
+                <blockquote>Hi, I'm Hisu</blockquote>
+                <p>- Have you ever wondered "Why my name is Hisu not Hiếu?" </p>
+                <p>- That is long story ^.^</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const menulist = document.getElementById('menulist');
+        const toggle = document.getElementById('toggle');
+        const blurback = document.getElementById('blurback');
+        blurback.onclick = function(){
+            menulist.classList.remove('actived');
+            blurback.style.backgroundColor = '';
+        }
+        toggle.onclick = function(){
+            menulist.classList.toggle('actived');
+            blurback.style.backgroundColor = 'rgba(44, 25, 25, 0.7)';
+        }
+        closemenu.onclick = function(){
+            menulist.classList.remove('actived');
+            blurback.style.backgroundColor = '';
+        }
+    </script>
+</body>
+</html>

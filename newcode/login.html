@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisu-Login</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <script src="https://kit.fontawesome.com/bb1c1a5855.js" crossorigin="anonymous"></script>
+    <script src="./js/scrips.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div id="blurback"></div>
+            <div class="homeicon">
+                <a href="./index.html"><img src="./img/icon.png" alt="icon"></a>
+            </div>
+            <div class="menu">
+                <div id="toggle"></div>
+                <ul id="menulist">
+                    <div class="back"><i id="closemenu" class="fa-solid fa-angles-right"></i></div>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <a href="./login.html">Login</a>
+                    </li>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-info"></i>
+                        <a href="">Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="login">
+            <div class="boxlog">
+                <form action="" class="formlog" method="post">
+                    <div class="userlog">
+                        <p>Tên đăng nhập:</p>
+                        <input type="text" placeholder="Username" name="username" id="">
+                    </div>
+                    <div class="passlog">
+                        <p>Mật khẩu:</p>
+                        <input type="password" name="password" id="passlog" placeholder="Password">
+                        <i id="checkpass" class="fa-regular fa-eye"></i>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LeB_JEhAAAAALALIw6DKhp5sPl2GJocNjxfWt7f"></div>
+                    <button type="submit">Đăng nhập</button>
+                </form>
+                <a href="">Đăng ký</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menulist = document.getElementById('menulist');
+        const toggle = document.getElementById('toggle');
+        const blurback = document.getElementById('blurback');
+        blurback.onclick = function(){
+            menulist.classList.remove('actived');
+            blurback.style.backgroundColor = '';
+        }
+        toggle.onclick = function(){
+            menulist.classList.toggle('actived');
+            blurback.style.backgroundColor = 'rgba(44, 25, 25, 0.7)';
+        }
+        closemenu.onclick = function(){
+            menulist.classList.remove('actived');
+            blurback.style.backgroundColor = '';
+        }
+    </script>
+    <script>
+        const checkpass = document.getElementById('checkpass');
+        const passlog = document.getElementById('passlog');
+        checkpass.onclick = function(){
+            if (checkpass.getAttribute('class')=='fa-regular fa-eye') {
+                passlog.setAttribute('type','text');
+                checkpass.setAttribute('class','fa-regular fa-eye-slash');
+            } else {
+                passlog.setAttribute('type','password');
+                checkpass.setAttribute('class','fa-regular fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>

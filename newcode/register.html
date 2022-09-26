@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisu-Reg</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <script src="./js/scrips.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.css" integrity="sha512-9nqhm3FWfB00id4NJpxK/wV1g9P2QfSsEPhSSpT+6qrESP6mpYbTfpC+Jvwe2XY27K5mLwwrqYuzqMGK5yC9/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div id="blurback"></div>
+            <div class="homeicon">
+                <a href="./index.html"><img src="./img/icon.png" alt="icon"></a>
+            </div>
+            <div class="menu">
+                <div id="toggle"></div>
+                <ul id="menulist">
+                    <div class="back"><i id="closemenu" class="fa-solid fa-angles-right"></i></div>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <a href="./login.html">Login</a>
+                    </li>
+                    <li class="menuitem">
+                        <i class="fa-solid fa-info"></i>
+                        <a href="">Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="register">
+            <div class="boxreg">
+                <form action="" method="">
+                  <div class="fullnamereg">
+                    <p>Tên đầy đủ:</p>
+                    <input type="text" name="fullname" id="" placeholder="Họ và tên">
+                  </div>
+                  <div class="userreg">
+                    <p>Tên đăng nhập:</p>
+                    <input type="text" name="username" id="" placeholder="Username">
+                  </div>
+                  <div class="passreg">
+                    <p>Mật khẩu:</p>
+                    <input type="password" name="password" id="passreg" placeholder="Password">
+                  </div>
+                  <div class="repassreg">
+                    <p>Nhập lại mật khẩu:</p>
+                    <input type="password" name="password" id="repassreg" placeholder="Password">
+                  </div>
+                  <div class="showpass">
+                    <input type="checkbox" name="" id="showpass"  >
+                    <nav>Hiện mật khẩu</nav>
+                  </div>
+                  <div class="birth">
+                    <p>Ngày sinh:</p>
+                    <input type="date" name="birth" id="">
+                  </div>
+                  <div class="sexual">
+                    <p>Giới tính:</p>
+                    <select name="sexual" id="">
+                        <option value=""></option>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                        <option value="Bê đê">Bê đê</option>
+                        <option value="less">Less</option>
+                        <option value="none">Đéo thích nói</option>
+                    </select>
+                  </div>
+                  <div class="numberphone">
+                    <p>Số điện thoại:</p>
+                    <input type="number" name="numberphone" id="" placeholder="Số điện thoại">
+                  </div>
+                  <div class="mail">
+                    <p>Email:</p>
+                    <input type="text" name="mail" id="" placeholder="Email">
+                  </div>
+                  <button type="">Đăng ký</button>
+                  <p class="hi"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <script>
+        var showpass = document.getElementById('showpass');
+        const passreg = document.getElementById('passreg');
+        const repassreg = document.getElementById('repassreg');
+        var confirmbtn = document.querySelector('.boxreg form button')
+        showpass.onclick = function(){
+            if (showpass.checked == true) {
+            passreg.setAttribute('type','text');
+            repassreg.setAttribute('type','text');
+        } else {
+            passreg.setAttribute('type','password');
+            repassreg.setAttribute('type','password');
+        }}
+        // ----------checkpass------------
+        confirmbtn.onclick = function(){
+            if (condition) {
+                
+            }
+            if (passreg.value != repassreg.value) {
+            
+            } else {
+            
+            }
+        }
+        // function showpasss(){
+        //     if (showpass.checked == true) {
+        //     passreg.setAttribute('type','text');
+        //     repassreg.setAttribute('type','text');
+        //     alert('ihi');
+        // } else {
+        //     passreg.setAttribute('type','password');
+        //     repassreg.setAttribute('type','password');
+        // }
+        // }
+    </script>
+    <footer>
+
+    </footer>
+</body>
+</html>
